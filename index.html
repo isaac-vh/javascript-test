@@ -73,7 +73,8 @@
     for (i = 0; i < coName.length; i++) {
         x += coName[i];
     }
-    document.getElementById('number-drinks-found').innerText = x;
+    document.getElementById('number-drinks-found').innerText = '';
+
     //fetching api
     fetch (cocktails)
         .then(res = res.json()
@@ -86,6 +87,9 @@
     //exercice told us to work with template
     template.querySelector(coName.nodeName).innerText='';
     template.querySelector(coName.length).innerText ='value';
+
+    //array filter
+    let cocktails = coName.filter('category')
 })();
 </script>
 
